@@ -2,9 +2,13 @@ import pygame
 from circleshape import CircleShape
 from constants import LINE_WIDTH, PLAYER_TURN_SPEED, PLAYER_SPEED, PLAYER_RADIUS
 class Player(CircleShape):
+    radius = PLAYER_RADIUS
     def __init__(self, x, y, radius):
-        super().__init__(x, y, PLAYER_RADIUS)
+        super().__init__(x, y, radius)  # this hits Sprite via CircleShape
         self.rotation = 0
+
+
+
     
     # in the Player class
     def triangle(self):
